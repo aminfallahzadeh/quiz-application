@@ -1,0 +1,52 @@
+.btn {
+    font-family: inherit;
+    color: inherit;
+    font-size: 2rem;
+    border: 2px solid $color-dark;
+    background-color: $color-dark;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.3s;
+
+    &-ui {
+        float: right;
+
+        @include responsive(phone) {
+            float: none;
+        }
+    }
+
+    &:not([disabled]):hover {
+        background-color: $color-darkest;
+    }
+
+    &[disabled]:hover {
+        cursor: not-allowed;
+    }
+
+    &-option {
+        width: 100%;
+        text-align: center;
+
+        @include responsive(tab-port) {
+            width: 80%;
+        }
+
+        &.correct {
+            background-color: $color-theme;
+            border: 2px solid $color-theme;
+            color: $color-light;
+        }
+
+        &.wrong {
+            background-color: $color-accent;
+            border: 2px solid $color-accent;
+            color: $color-darkest;
+        }
+
+        &:not([disabled]):hover {
+            transform: translateX(1.2rem);
+        }
+    }
+}

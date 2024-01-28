@@ -1,0 +1,13 @@
+.footer {
+    @include responsive(tab-port) {
+        padding: 0 7rem 0 7rem;
+    }
+
+    @include responsive(phone) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+    }
+}

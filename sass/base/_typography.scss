@@ -1,0 +1,87 @@
+h1 {
+    font-family: "Codystar";
+    font-size: 5rem;
+
+    @include responsive(tab-port) {
+        font-size: 3.2rem;
+    }
+
+    @include responsive(phone) {
+        font-size: 2.3rem;
+    }
+}
+
+h2 {
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+
+    @include responsive(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include responsive(phone) {
+        font-size: 2.4rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+
+    @include responsive(tab-port) {
+        font-size: 2rem;
+    }
+
+    @include responsive(phone) {
+        font-size: 1.8rem;
+    }
+}
+
+h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+
+    @include responsive(tab-port) {
+        font-size: 1.8rem;
+    }
+
+    @include responsive(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.result {
+    background-color: $color-theme;
+    color: $color-light;
+    border-radius: 100px;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+
+    @include responsive(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.result span {
+    font-size: 2.2rem;
+    margin-right: 4px;
+
+    @include responsive(phone) {
+        font-size: 1.7rem;
+    }
+}
+
+.highscore {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 4.8rem;
+
+    @include responsive(phone) {
+        font-size: 1.6rem;
+    }
+}

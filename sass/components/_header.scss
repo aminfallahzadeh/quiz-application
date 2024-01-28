@@ -1,0 +1,28 @@
+.app-header {
+    width: 66rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    @include responsive(tab-port) {
+        width: 42rem;
+    }
+
+    @include responsive(phone) {
+        width: 32rem;
+    }
+
+    img {
+        width: 10rem;
+
+        @include responsive(tab-port) {
+            width: 7rem;
+        }
+
+        @include responsive(phone) {
+            width: 6rem;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.error {
+    &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 3rem;
+        margin-top: 10rem;
+    }
+
+    &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &::before {
+        width: 40px;
+        top: 48%;
+        left: 16%;
+        transform: rotateZ(50deg);
+    }
+
+    &::after {
+        width: 40px;
+        top: 48%;
+        left: 16%;
+        transform: rotateZ(-50deg);
+    }
+}
+
+.circle,
+.circle-border {
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+}
+
+.circle {
+    z-index: 1;
+    position: relative;
+    background: white;
+    transform: scale(1);
+    animation: error-success-anim 700ms ease;
+
+    &-border {
+        z-index: 0;
+        position: absolute;
+        transform: scale(1.1);
+        animation: error-circle-anim 400ms ease;
+        background: $color-red;
+    }
+}
+
+.error::before,
+.error::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: $color-red;
+    position: absolute;
+}
